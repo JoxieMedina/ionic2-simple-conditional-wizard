@@ -128,8 +128,8 @@ Xcode version: Xcode 8.1 Build version 8B62
 ## Preview
  ![](./captures/preview.gif)
 
- ## TO DO
- - [ ] Test in other platforms.
+## TO DO
+- [ ] Test in other platforms.
 - [ ]  Improve the animations or steps transitions.
 - [ ]  Improve the wizard hide when the keyboard is open.
 - [ ]  Others improvements or new features are welcome :) 
