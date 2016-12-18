@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Ion Simple Wizard
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-simple-wizard [(step)]="step" [showSteps]="false" (finish)="onFinish()" [finishIcon]="'done-all'" [(stepCondition)]="stepCondition">
+    <ion-wizard-step>
+      <ion-card class="card-wizard">
+        <ion-icon class="card-wizard-icon" name="ionic" color="primary"></ion-icon>
+        <ion-card-content>
+          <ion-card-title>
+            Ionic 2 Simple Conditional Wizard
+          </ion-card-title>
+          <p>
+            Simple component to handle conditionals steps wizard in ionic 2. This is the first step.
+          </p>
+          <button ion-button outline (click)="toggle()">Press to Continue</button>
+        </ion-card-content>
+      </ion-card>
+    </ion-wizard-step>
+    <ion-wizard-step>
+      <ion-card class="card-wizard">
+        <ion-icon class="card-wizard-icon" [name]="getIconStep2()" color="primary"></ion-icon>
+        <ion-card-content>
+          <ion-card-title>
+            Conditions
+          </ion-card-title>
+          <p>
+            Manage the next step condition of the wizard however you want
+            <ion-list>
+              <ion-item>
+                <ion-input (input)="textChange($event)" type="text" placeholder="Edit to continue"></ion-input>
+              </ion-item>
+            </ion-list>
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-wizard-step>
+    <ion-wizard-step>
+      <ion-card class="card-wizard">
+        <ion-icon class="card-wizard-icon" [name]="getIconStep3()" color="primary"></ion-icon>
+        <ion-card-content>
+          <ion-card-title>
+            Final Step
+          </ion-card-title>
+          <p>
+            You can change the step animation , the button animation, show or hide the step counter and more.<br>Please go to the
+            <a
+              href="http://www.creadoresti.com/" target="_blank">documentation</a> for more details and options. <br>Like it to finish the wizard.
+          </p>
+          <button ion-button outline icon-right (click)="toggle()">
+              {{stepCondition?'Dislike':'Like'}}
+            <ion-icon [name]="getLikeIcon()"></ion-icon>
+            </button>
+        </ion-card-content>
+      </ion-card>
+    </ion-wizard-step>
+  </ion-simple-wizard>
+
+</ion-content>
