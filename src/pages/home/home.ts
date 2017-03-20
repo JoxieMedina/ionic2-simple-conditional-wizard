@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, Events } from 'ionic-angular';
+import { DynamicPage } from '../dynamic-steps/dynamic.page';
 
 @Component({
   selector: 'page-home',
@@ -28,11 +29,11 @@ export class HomePage {
     });
     this.evts.subscribe('step:next', () => {
       //Do something if next
-      console.log('Next pressed: ',this.currentStep);
+      console.log('Next pressed: ', this.currentStep);
     });
     this.evts.subscribe('step:back', () => {
       //Do something if back
-      console.log('Back pressed: ',this.currentStep);
+      console.log('Back pressed: ', this.currentStep);
     });
   }
   /**
@@ -61,7 +62,9 @@ export class HomePage {
   getLikeIcon() {
     return this.stepCondition ? 'thumbs-down' : 'thumbs-up';
   }
-
+  goToExample2() {
+    this.navCtrl.push(DynamicPage);
+  }
 
   textChange(e) {
     if (e.target.value && e.target.value.trim() !== '') {

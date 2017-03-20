@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>
+            Dynamic Example
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-simple-wizard [(step)]="step" [showSteps]="true" (finish)="onFinish()" [finishIcon]="'done-all'" [(stepCondition)]="stepCondition">
+        <ion-wizard-step *ngFor="let step of stepsArray">
+            <ion-card>
+                <ion-card-header>
+                    {{step.title}}
+                </ion-card-header>
+                <ion-card-content>
+                    {{step.content}}
+                    <ion-item>
+                        <ion-label>Next Condition</ion-label>
+                        <ion-toggle (ionChange)="toggleCondition($event)" [(ngModel)]="stepCondition"></ion-toggle>
+                    </ion-item>
+                </ion-card-content>
+            </ion-card>
+        </ion-wizard-step>
+
+    </ion-simple-wizard>
+
+
+</ion-content>

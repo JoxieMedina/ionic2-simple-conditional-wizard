@@ -14,6 +14,13 @@ export class WizardAnimations {
             ])
         ])
     ];
+    static btn_none = [
+        trigger('btnState', [
+            state('enter', style({ position: 'relative', top: 0 ,width:'100%'})),
+            state('leave', style({ display: 'none', position: 'relative', top: 0 }))
+            
+        ])
+    ];
     static btnflipY = [
         trigger('btnState', [
             transition(':enter', [
@@ -58,7 +65,7 @@ export class WizardAnimations {
     //Steps Animations
     static carruselRight = [
         trigger('WizardAnimations', [
-            state('enter', style({ position: 'absolute', top: 0 })),
+            state('enter', style({ position: 'absolute', top: 0,width:'100%' })),
             state('leave', style({ visibility: 'hidden', position: 'absolute', top: 0 })),
             transition('*=>enter', [
                 style({ visibility: 'visible', opacity: 0, transform: 'translateX(-100%)' }),
@@ -72,20 +79,27 @@ export class WizardAnimations {
     ];
     static zoom = [
         trigger('WizardAnimations', [
-            state('enter', style({ position: 'absolute', top: 0 })),
+            state('enter', style({ position: 'absolute', top: 0 ,width:'100%'})),
             state('leave', style({ visibility: 'hidden', position: 'absolute', top: 0 })),
             transition('*=>enter', [
-                style({ visibility: 'visible', opacity: 0, transform: 'scale(0)' }),
-                animate('300ms ease-in', style({ opacity: 1, transform: 'scale(1)' }))
+                style({visibility: 'visible', opacity: 0, transform: 'scale(0)' }),
+                animate('300ms ease-in', style({ opacity: 1, transform: 'scale(1)' ,top: 0 }))
             ]),
             transition('*=>leave', [
-                animate('300ms ease-out', style({ opacity: 0, transform: 'scale(0)' }))
+                animate('300ms ease-out', style({ opacity: 0, transform: 'scale(0)',top: 0  }))
             ])
+        ])
+    ];
+     static none = [
+        trigger('WizardAnimations', [
+            state('enter', style({ position: 'relative', top: 0 ,width:'100%'})),
+            state('leave', style({ display: 'none', position: 'relative', top: 0 }))
+            
         ])
     ];
     static carruselLeft = [
         trigger('WizardAnimations', [
-            state('enter', style({ position: 'absolute', top: 0 })),
+            state('enter', style({ position: 'absolute', top: 0,width:'100%' })),
             state('leave', style({ visibility: 'hidden', position: 'absolute', top: 0 })),
             transition('*=>enter', [
                 style({ visibility: 'visible', opacity: 0, transform: 'translateX(100%)' }),
@@ -99,7 +113,7 @@ export class WizardAnimations {
     ];
     static carruselBottom = [
         trigger('WizardAnimations', [
-            state('enter', style({ position: 'absolute', top: 0 })),
+            state('enter', style({ position: 'absolute', top: 0 ,width:'100%'})),
             state('leave', style({ visibility: 'hidden', position: 'absolute', top: 0 })),
             transition('*=>enter', [
                 style({ visibility: 'visible', opacity: 0, transform: 'translateY(-100%)' }),
@@ -113,7 +127,7 @@ export class WizardAnimations {
     ];
     static carruselTop = [
         trigger('WizardAnimations', [
-            state('enter', style({ position: 'absolute', top: 0 })),
+            state('enter', style({ position: 'absolute', top: 0 ,width:'100%'})),
             state('leave', style({ visibility: 'hidden', position: 'absolute', top: 0 })),
             transition('*=>enter', [
                 style({ visibility: 'visible', opacity: 0, transform: 'translateY(100%)' }),
@@ -127,7 +141,7 @@ export class WizardAnimations {
     ];
     static flipY = [
         trigger('WizardAnimations', [
-            state('enter', style({ position: 'absolute', top: 0 })),
+            state('enter', style({ position: 'absolute', top: 0 ,width:'100%'})),
             state('leave', style({ visibility: 'hidden', position: 'absolute', top: 0 })),
             transition('*=>enter', [
                 style({ visibility: 'visible' }),
@@ -152,7 +166,7 @@ export class WizardAnimations {
     ];
     static flipX = [
         trigger('WizardAnimations', [
-            state('enter', style({ position: 'absolute', top: 0 })),
+            state('enter', style({ position: 'absolute', top: 0 ,width:'100%'})),
             state('leave', style({ visibility: 'hidden', position: 'absolute', top: 0 })),
             transition('*=>enter', [
                 style({ visibility: 'visible' }),

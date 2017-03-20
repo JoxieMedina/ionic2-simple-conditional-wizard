@@ -1,10 +1,14 @@
 page-home {
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
 
-    .card-wizard{
-        text-align: center;
-    }
-    .card-wizard-icon{
-        font-size: 10em;
-    }
+  ion-wizard-step {
+    width: 100%;
+  }
 
+  .card-wizard-icon {
+    font-size: 10em;
+  }
 }
