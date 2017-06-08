@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Keyboard } from 'ionic-native';
+/*import { Keyboard } from '@ionic-native/keyboard';*/
 import { Events } from 'ionic-angular';
 import { WizardAnimations } from './ion-simple-wizard-animations';
 
@@ -25,12 +25,12 @@ export class IonSimpleWizard {
     /**
      * Hide the wizard buttons when the keyboard is open
      */
-    Keyboard.onKeyboardShow().subscribe(() => {
+    /*this.keyboard.onKeyboardShow().subscribe(() => {
       this.hideWizard = true;
     });
-    Keyboard.onKeyboardHide().subscribe(() => {
+    this.keyboard.onKeyboardHide().subscribe(() => {
       this.hideWizard = false;
-    })
+    })*/
   }
   /**
    * @return {number} New Steps
