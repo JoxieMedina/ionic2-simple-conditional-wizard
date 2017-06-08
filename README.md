@@ -1,6 +1,6 @@
-# Ionic 2 Simple Conditional Wizard
+# Ionic 3.3.0 Simple Conditional Wizard
 
-Simple component to handle conditionals steps wizard in ionic 2.
+Simple component to handle conditionals steps wizard in ionic 3.
 
 ## Getting Started
 
@@ -109,20 +109,32 @@ this.events.subscribe('step:next', () => {
 ```
 ## Ionic Info
 ```
-Cordova CLI: 6.4.0 
-Ionic Framework Version: 2.0.0-rc.3
-Ionic CLI Version: 2.1.8
-Ionic App Lib Version: 2.1.4
-Ionic App Scripts Version: 0.0.47
-ios-deploy version: 1.8.6 
-ios-sim version: 5.0.3 
-OS: macOS Sierra
-Node Version: v5.8.0
-Xcode version: Xcode 8.1 Build version 8B62
+global packages:
+
+    @ionic/cli-utils : 1.3.0
+    Cordova CLI      : 6.5.0 
+    Ionic CLI        : 3.3.0
+
+local packages:
+
+    @ionic/app-scripts              : 1.3.7
+    @ionic/cli-plugin-cordova       : 1.3.0
+    @ionic/cli-plugin-ionic-angular : 1.3.0
+    Cordova Platforms               : none
+    Ionic Framework                 : ionic-angular 3.3.0
+
+System:
+
+    Node       : v7.5.0
+    OS         : Linux 4.4
+    Xcode      : not installed
+    ios-deploy : not installed
+    ios-sim    : not installed
+
 ```
 
 ## Platforms
-* Android (Tested in 5.1.1)
+* Android (Tested in 6.0)
 * iOS (Tested in 10.2)
 
 ## Preview
