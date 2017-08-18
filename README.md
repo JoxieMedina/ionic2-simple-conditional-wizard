@@ -13,11 +13,12 @@ Simple component to handle conditionals steps wizard in ionic 3.
 ## Using this component in your projects
 
 * Copy and paste ion-simple-wizard component files from <a href='/src/pages/'>pages folder</a>.
-* Import it and declare the 'IonSimpleWizard' and 'IonSimpleWizardStep' component in the app.module.ts file:
+* Import it and declare the 'IonSimpleWizard' and 'IonSimpleWizardStep' component and 'BrowserAnimationsModule' module in the app.module.ts file:
 ```
 ...
 import {IonSimpleWizard} from '../pages/ion-simple-wizard/ion-simple-wizard.component';
 import {IonSimpleWizardStep} from '../pages/ion-simple-wizard/ion-simple-wizard.step.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,9 @@ import {IonSimpleWizardStep} from '../pages/ion-simple-wizard/ion-simple-wizard.
     HomePage,
     IonSimpleWizard,
     IonSimpleWizardStep
+  ],
+  imports: [
+    BrowserAnimationsModule
   ]
   ...
 ```
