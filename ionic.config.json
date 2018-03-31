@@ -1,5 +1,8 @@
 {
   "name": "ionic-2-simple-wizard",
   "app_id": "32473d13",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

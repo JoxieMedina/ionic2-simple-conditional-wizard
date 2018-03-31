@@ -23,7 +23,7 @@ export class HomePage {
     //You can subscribe to the Event 'step:changed' to handle the current step
     this.evts.subscribe('step:changed', step => {
       //Handle the current step if you need
-      this.currentStep = step[0];
+      this.currentStep = step;
       //Set the step condition to the default value
       this.stepCondition = this.stepDefaultCondition;
     });

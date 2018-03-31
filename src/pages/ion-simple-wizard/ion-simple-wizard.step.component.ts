@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonSimpleWizard } from './ion-simple-wizard.component';
 import { Events } from 'ionic-angular';
 import { WizardAnimations } from './ion-simple-wizard-animations';
- 
+
 @Component({
     selector: 'ion-wizard-step',
     host: {
@@ -11,7 +11,7 @@ import { WizardAnimations } from './ion-simple-wizard-animations';
     template: `
     <ng-content></ng-content>
   `,
-    animations: WizardAnimations.zoom//TO DO: Change the animation by @Input for example
+    animations: WizardAnimations.zoom //TO DO: Change the animation by @Input for example
 })
 export class IonSimpleWizardStep {
     public isCurrent;
